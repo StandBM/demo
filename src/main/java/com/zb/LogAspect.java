@@ -26,7 +26,6 @@ public class LogAspect {
         System.out.print("注解式拦截"+action.name());
     }
 
-    @Before("execution((com.zb.DemoMethodService..*(..))")
     public void before(JoinPoint joinPoint){
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
